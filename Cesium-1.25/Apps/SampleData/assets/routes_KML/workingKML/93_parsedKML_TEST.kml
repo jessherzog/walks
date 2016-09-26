@@ -43,7 +43,7 @@
         </Style>
 
         <Placemark>
-            <name><![CDATA[(Start)]]></name>
+            <name><![CDATA[]]></name>
             <description><![CDATA[]]></description>
             <TimeStamp>
                 <when>2016-09-03T01:01:00.000Z</when>
@@ -85,13 +85,16 @@
 
                     <when>2016-09-03T01:03:30.000Z</when>
                     <gx:coord>-73.9892728,40.7301006,0.0</gx:coord> 
+                    
                     <when>2016-09-03T01:04:00.000Z</when>
-                    <gx:coord>-73.9874622,40.7293422,0.0</gx:coord> 
+                    <gx:coord>-73.9874622,40.7293422,0.0</gx:coord>
+
                     <when>2016-09-03T01:04:30.000Z</when>
                     <gx:coord>-73.98762,40.7287087,0.0</gx:coord> 
 
                     <when>2016-09-03T01:05:00.000Z</when>
                     <gx:coord>-73.9855357,40.7278403,0.0</gx:coord> 
+
                     <when>2016-09-03T01:05:30.000Z</when>
                     <gx:coord>-73.9856012,40.727313,0.0</gx:coord>
 
@@ -110,7 +113,7 @@
         <Placemark>
             <name><![CDATA[(End)]]></name>
             <TimeStamp>
-                <when>2016-09-03T01:07:00.000Z</when>
+                <when>2016-09-03T01:07:40.000Z</when>
             </TimeStamp>
             <styleUrl>#end</styleUrl>
             <Point>
