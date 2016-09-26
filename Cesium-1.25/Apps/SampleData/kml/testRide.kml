@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+xmlns:gx="http://www.google.com/kml/ext/2.2"
+xmlns:atom="http://www.w3.org/2005/Atom">
+
+<Document>
+
+<open>1</open>
+<visibility>1</visibility>
+<name><![CDATA[Schuylkill River Trail Bike Ride]]></name>
+
+<Style id="track">
+	<LineStyle>
+		<color>7f0000ff</color>
+		<width>4</width>
+	</LineStyle>
+	<IconStyle>
+		<scale>1.3</scale>
+		<Icon>
+			<href>http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href>
+		</Icon>
+	</IconStyle>
+</Style>
+
+<Style id="start">
+	<IconStyle>
+		<scale>1.3</scale>
+		<Icon>
+			<href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+		</Icon>
+		<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+	</IconStyle>
+</Style>
+
+<Style id="end">
+	<IconStyle>
+		<scale>1.3</scale>
+		<Icon>
+			<href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+		</Icon>
+		<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+	</IconStyle>
+</Style>
+
+<Style id="statistics">
+	<IconStyle>
+		<scale>1.3</scale>
+		<Icon>
+			<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+		</Icon>
+		<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+	</IconStyle></Style>
+
+<Style id="waypoint">
+	<IconStyle>
+		<scale>1.3</scale>
+		<Icon>
+			<href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
+		</Icon>
+		<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+	</IconStyle>
+</Style>
+
+<Placemark>
+	<name><![CDATA[Schuylkill River Trail Bike Ride (Start)]]></name>
+	<description><![CDATA[]]></description>
+	<TimeStamp>
+		<when>2013-07-25T19:33:58.000Z</when>
+	</TimeStamp>
+	<styleUrl>#start</styleUrl>
+	<Point>
+		<coordinates>-75.300238,40.109584,-2.799999952316284</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark id="tour">
+	<name><![CDATA[Matt]]></name>
+	<description><![CDATA[blah ride]]></description>
+
+	<styleUrl>#track</styleUrl>
+
+	<gx:MultiTrack>
+		<altitudeMode>absolute</altitudeMode>
+		<gx:interpolate>1</gx:interpolate>
+		<gx:Track>
+
+			<when>2013-07-25T19:33:58.000Z</when>
+			<gx:coord>-75.300238 40.109584 -2.799999952316284</gx:coord>
+			<when>2013-07-25T19:33:59.000Z</when>
+			<gx:coord>-75.300234 40.109597 38.0</gx:coord>
+			<when>2013-07-25T19:34:00.000Z</when>
+			<gx:coord>-75.300214 40.109641 36.099998474121094</gx:coord>
+			<when>2013-07-25T19:34:09.000Z</when>
+			<gx:coord>-75.300233 40.109603 20.700000762939453</gx:coord>
+			<when>2013-07-25T19:34:10.000Z</when>
+			<gx:coord>-75.30025 40.109586 25.600000381469727</gx:coord>
+			<when>2013-07-25T19:34:42.000Z</when>
+			<gx:coord>-75.30026 40.10963 36.5</gx:coord>
+
+		</gx:Track>
+	</gx:MultiTrack>
+</Placemark>
+
+<Placemark>
+	<name><![CDATA[Schuylkill River Trail Bike Ride (End)]]></name>
+	<TimeStamp>
+		<when>2013-07-25T21:07:25.000Z</when>
+	</TimeStamp>
+	<styleUrl>#end</styleUrl>
+	<Point>
+		<coordinates>-75.30001,40.109709,33.29999923706055</coordinates>
+	</Point>
+</Placemark>
+
+</Document>
+</kml>
