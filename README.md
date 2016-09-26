@@ -10,7 +10,9 @@ node.js automatic initialize server host
 
 add camera
 
-mix recordings
+no contacts - blurry map
+
+headphones - mix recordings
 
 ####proj 2 – city system
 buildings, landmarks
