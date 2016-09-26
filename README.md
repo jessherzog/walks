@@ -2,17 +2,18 @@
 backwards
 
 pacing
+
+
+
 ## **to do** 
 
-push to github/node server
-
-node.js automatic initialize server host
+node.js automatic initialize localhost
 
 add camera
 
 no contacts - blurry map
 
-headphones - mix recordings
+headphones - embed soundcloud recordings
 
 ####proj 2 – city system
 buildings, landmarks
