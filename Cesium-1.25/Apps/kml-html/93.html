@@ -11,7 +11,6 @@
 
   <style>
       @import url(/Build/Cesium/Widgets/widgets.css);
-      /*@import url(../templates/bucket.css);*/
       html, body, #cesiumContainer {
           width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
       }
@@ -28,23 +27,22 @@
         canvas : viewer.scene.canvas
     };
 
-    viewer.dataSources.add(Cesium.KmlDataSource.load('../SampleData/assets/routes_KML/93.kml', options)).then(function(dataSource){
+    viewer.dataSources.add(Cesium.KmlDataSource.load('../SampleData/assets/routes_KML/workingKML/93_parsedKML_TEST.kml', options)).then(function(dataSource){
         viewer.clock.shouldAnimate = false;
         var rider = dataSource.entities.getById('tour');
         viewer.flyTo(rider).then(function(){
             viewer.trackedEntity = rider;
             viewer.selectedEntity = viewer.trackedEntity;
-            viewer.clock.multiplier = 30;
+            viewer.clock.multiplier = 6;
             viewer.clock.shouldAnimate = true;
         });
     });
 
-    // Sandcastle.reset = function() {
-    //     viewer.dataSources.removeAll();
-    //     viewer.clock.clockRange = Cesium.ClockRange.UNBOUNDED;
-    //     viewer.clock.clockStep = Cesium.ClockStep.SYSTEM_CLOCK;
-    // };
-
+    if (typeof Cesium !== "undefined") {
+        startup(Cesium);
+    } else if (typeof require === "function") {
+        require(["Cesium"], startup);
+    }
   </script>
 </body>
 </html>

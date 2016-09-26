@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Use correct character set. -->
   <meta charset="utf-8">
-  <!-- Tell IE to use the latest, best version. -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
   <title>9/5 walk</title>
+
   <script src="/Build/Cesium/Cesium.js"></script>
+
   <style>
       @import url(/Build/Cesium/Widgets/widgets.css);
       html, body, #cesiumContainer {
@@ -18,8 +18,31 @@
 </head>
 <body>
   <div id="cesiumContainer"></div>
+
   <script>
     var viewer = new Cesium.Viewer('cesiumContainer');
+
+    var options = {
+        camera : viewer.scene.camera,
+        canvas : viewer.scene.canvas
+    };
+
+    viewer.dataSources.add(Cesium.KmlDataSource.load('../SampleData/assets/routes_KML/workingKML/95_parsedKML_TEST.kml', options)).then(function(dataSource){
+        viewer.clock.shouldAnimate = false;
+        var rider = dataSource.entities.getById('tour');
+        viewer.flyTo(rider).then(function(){
+            viewer.trackedEntity = rider;
+            viewer.selectedEntity = viewer.trackedEntity;
+            viewer.clock.multiplier = 30;
+            viewer.clock.shouldAnimate = true;
+        });
+    });
+
+    if (typeof Cesium !== "undefined") {
+        startup(Cesium);
+    } else if (typeof require === "function") {
+        require(["Cesium"], startup);
+    }
   </script>
 </body>
 </html>

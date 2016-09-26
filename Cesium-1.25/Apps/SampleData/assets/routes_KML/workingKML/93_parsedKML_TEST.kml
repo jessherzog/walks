@@ -26,7 +26,7 @@
             <IconStyle>
                 <scale>1.3</scale>
                 <Icon>
-                    <href>https://maps.google.com/mapfiles/kml/pal3/icon62.png</href>
+                    <href>http://maps.google.com/mapfiles/kml/pal3/icon62.png</href>
                 </Icon>
                 <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
             </IconStyle>
@@ -36,108 +36,89 @@
             <IconStyle>
                 <scale>1.3</scale>
                 <Icon>
-                    <href>https://maps.google.com/mapfiles/kml/pal2/icon13.png</href>
+                    <href>http://maps.google.com/mapfiles/kml/pal2/icon13.png</href>
                 </Icon>
                 <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
             </IconStyle>
         </Style>
 
-<!--         <Style id="statistics">
-            <IconStyle>
-                <scale>1.3</scale>
-                <Icon>
-                    <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-                </Icon>
-                <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-            </IconStyle></Style>
+        <Placemark>
+            <name><![CDATA[(Start)]]></name>
+            <description><![CDATA[]]></description>
+            <TimeStamp>
+                <when>2016-09-03T01:01:00.000Z</when>
+            </TimeStamp>
+            
+            <Point>
+                <coordinates>
+                    -73.9875989,40.7330621,0.0
+                </coordinates>
+            </Point>
+        </Placemark>
 
-        <Style id="waypoint">
-            <IconStyle>
-                <scale>1.3</scale>
-                <Icon>
-                    <href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
-                </Icon>
-                <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-            </IconStyle>
-        </Style> -->
+        <Placemark id="tour">
+            <name><![CDATA[Us]]></name>
+            <description>
+                <![CDATA[walk taken on Sept 3rd]]>
+            </description>
 
-            <Placemark>
-                <name><![CDATA[(Start)]]></name>
-                <description><![CDATA[]]></description>
-                <TimeStamp>
+            <styleUrl>#track</styleUrl>
+
+            <gx:MultiTrack>
+                <altitudeMode>absolute</altitudeMode>
+                <gx:interpolate>1</gx:interpolate>
+                <gx:Track>
                     <when>2016-09-03T01:01:00.000Z</when>
-                </TimeStamp>
-                
-                <Point>
-                    <coordinates>
-                        -73.9875989,40.7330621,0.0
-                    </coordinates>
-                </Point>
-            </Placemark>
+                    <gx:coord>-73.9875989,40.7330621,0.0</gx:coord>
 
-            <Placemark id="tour">
-                <name><![CDATA[Us]]></name>
-                <description>
-                    <![CDATA[walk taken on Sept 3rd]]>
-                </description>
+                    <when>2016-09-03T01:01:30.000Z</when>
+                    <gx:coord>-73.988571,40.7315746,0.0</gx:coord> 
 
-                <styleUrl>#track</styleUrl>
+                    <when>2016-09-03T01:02:00.000Z</when>
+                    <gx:coord>-73.9889339,40.7311011,0.0</gx:coord>
 
-                <gx:MultiTrack>
-                    <altitudeMode>absolute</altitudeMode>
-                    <gx:interpolate>1</gx:interpolate>
-                    <gx:Track>
-                        <when>2016-09-03T01:01:00.000Z</when>
-                        <gx:coord>-73.9875989,40.7330621,0.0</gx:coord>
+                    <when>2016-09-03T01:02:30.000Z</when>
+                    <gx:coord>-73.9889652,40.7309751,0.0</gx:coord>
 
-                        <when>2016-09-03T01:01:30.000Z</when>
-                        <gx:coord>-73.988571,40.7315746,0.0</gx:coord> 
+                    <when>2016-09-03T01:03:00.000Z</when>
+                    <gx:coord>-73.9890927,40.7307291,0.0</gx:coord>
 
-                        <when>2016-09-03T01:02:00.000Z</when>
-                        <gx:coord>-73.9889339,40.7311011,0.0</gx:coord>
+                    <when>2016-09-03T01:03:30.000Z</when>
+                    <gx:coord>-73.9892728,40.7301006,0.0</gx:coord> 
+                    <when>2016-09-03T01:04:00.000Z</when>
+                    <gx:coord>-73.9874622,40.7293422,0.0</gx:coord> 
+                    <when>2016-09-03T01:04:30.000Z</when>
+                    <gx:coord>-73.98762,40.7287087,0.0</gx:coord> 
 
-                        <when>2016-09-03T01:02:30.000Z</when>
-                        <gx:coord>-73.9889652,40.7309751,0.0</gx:coord>
+                    <when>2016-09-03T01:05:00.000Z</when>
+                    <gx:coord>-73.9855357,40.7278403,0.0</gx:coord> 
+                    <when>2016-09-03T01:05:30.000Z</when>
+                    <gx:coord>-73.9856012,40.727313,0.0</gx:coord>
 
-                        <when>2016-09-03T01:03:00.000Z</when>
-                        <gx:coord>-73.9890927,40.7307291,0.0</gx:coord>
+                    <when>2016-09-03T01:06:00.000Z</when>
+                    <gx:coord>-73.9869247,40.725423,0.0</gx:coord>
 
-                        <when>2016-09-03T01:03:30.000Z</when>
-                        <gx:coord>-73.9892728,40.7301006,0.0</gx:coord> 
-                        <when>2016-09-03T01:04:00.000Z</when>
-                        <gx:coord>-73.9874622,40.7293422,0.0</gx:coord> 
-                        <when>2016-09-03T01:04:30.000Z</when>
-                        <gx:coord>-73.98762,40.7287087,0.0</gx:coord> 
+                    <when>2016-09-03T01:06:30.000Z</when>
+                    <gx:coord>-73.9868091,40.7252281,0.0</gx:coord>
 
-                        <when>2016-09-03T01:05:00.000Z</when>
-                        <gx:coord>-73.9855357,40.7278403,0.0</gx:coord> 
-                        <when>2016-09-03T01:05:30.000Z</when>
-                        <gx:coord>-73.9856012,40.727313,0.0</gx:coord>
-
-                        <when>2016-09-03T01:06:00.000Z</when>
-                        <gx:coord>-73.9869247,40.725423,0.0</gx:coord>
-
-                        <when>2016-09-03T01:06:30.000Z</when>
-                        <gx:coord>-73.9868091,40.7252281,0.0</gx:coord>
-
-                        <when>2016-09-03T01:07:00.000Z</when>
-                        <gx:coord>-73.9782044,40.7214363,0.0</gx:coord>
-                    </gx:Track>
-                </gx:MultiTrack>
-            </Placemark>
-
-            <Placemark>
-                <name><![CDATA[(End)]]></name>
-                <TimeStamp>
                     <when>2016-09-03T01:07:00.000Z</when>
-                </TimeStamp>
-                <styleUrl>#end</styleUrl>
-                <Point>
-                    <coordinates>
-                        -73.9868091,40.7252281,0.0
-                    </coordinates>
-                </Point>
-            </Placemark>
+                    <gx:coord>-73.9782044,40.7214363,0.0</gx:coord>
+                </gx:Track>
+            </gx:MultiTrack>
+        </Placemark>
+
+        <Placemark>
+            <name><![CDATA[(End)]]></name>
+            <TimeStamp>
+                <when>2016-09-03T01:07:00.000Z</when>
+            </TimeStamp>
+            <styleUrl>#end</styleUrl>
+            <Point>
+                <coordinates>
+                    -73.9868091,40.7252281,0.0
+                </coordinates>
+            </Point>
+        </Placemark>
 
     </Document>
 </kml>
