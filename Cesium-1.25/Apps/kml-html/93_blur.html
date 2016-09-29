@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
-  <title>9/6 walk</title>
+  <title>9/3 walk</title>
 
   <script src="/Build/Cesium/Cesium.js"></script>
 
@@ -14,11 +14,15 @@
       html, body, #cesiumContainer {
           width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
       }
-
+      #the_one{
+        -webkit-filter: blur(5px);
+      }
   </style>
 </head>
 <body>
-  <div id="cesiumContainer"></div>
+    <div id="cesiumContainer">
+            
+    </div>
 
   <script>
     var viewer = new Cesium.Viewer('cesiumContainer');
@@ -28,7 +32,7 @@
         canvas : viewer.scene.canvas
     };
 
-    viewer.dataSources.add(Cesium.KmlDataSource.load('../SampleData/assets/routes_KML/workingKML/96_parsedKML_TEST.kml', options)).then(function(dataSource){
+    viewer.dataSources.add(Cesium.KmlDataSource.load('../SampleData/assets/routes_KML/workingKML/93_parsedKML_TEST.kml', options)).then(function(dataSource){
         viewer.clock.shouldAnimate = false;
         var rider = dataSource.entities.getById('tour');
         viewer.flyTo(rider).then(function(){

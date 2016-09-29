@@ -14,10 +14,14 @@
       html, body, #cesiumContainer {
           width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
       }
+
   </style>
 </head>
 <body>
-  <div id="cesiumContainer"></div>
+    <div id="cesiumContainer">
+            
+    </div>
+
   <script>
     var viewer = new Cesium.Viewer('cesiumContainer');
 
@@ -43,6 +47,5 @@
         require(["Cesium"], startup);
     }
   </script>
-  <script src="/Apps/kml-html/blur.js"></script>
 </body>
 </html>
