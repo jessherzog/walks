@@ -30,7 +30,7 @@
         canvas : viewer.scene.canvas
     };
 
-    viewer.dataSources.add(Cesium.KmlDataSource.load('../SampleData/assets/routes_KML/workingKML/97_parsedKML_TEST.kml', options)).then(function(dataSource){
+    viewer.dataSources.add(Cesium.KmlDataSource.load('../../SampleData/assets/routes_KML/workingKML/97_parsedKML_TEST.kml', options)).then(function(dataSource){
         viewer.clock.shouldAnimate = false;
         var rider = dataSource.entities.getById('tour');
         viewer.flyTo(rider).then(function(){

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+  <title>9/3 walk</title>
+
+  <script src="/Build/Cesium/Cesium.js"></script>
+  <script src="/Cesium-1.25/Apps/kml-html/audiojs/audiojs/audio.min.js"></script>
+
+  <style>
+      @import url(/Build/Cesium/Widgets/widgets.css);
+      html, body, #cesiumContainer {
+        width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+      }
+      audio{
+        
+      }
+
+  </style>
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+    <audio src="/mp3/juicy.mp3" preload="auto" />
+
+  <script>
+    var viewer = new Cesium.Viewer('cesiumContainer');
+
+    // viewer.scene.globe.enableLighting = true;
+    // viewer.terrainProvider = new Cesium.CesiumTerrainProvider({
+    //   url : 'https://assets.agi.com/stk-terrain/world',
+    //   requestWaterMask : true,
+    //   requestVertexNormals : true
+    // });
+
+    // viewer.scene.globe.depthTestAgainstTerrain = true;
+
+    var options = {
+        camera : viewer.scene.camera,
+        canvas : viewer.scene.canvas
+    };
+
+    viewer.dataSources.add(Cesium.KmlDataSource.load('../../SampleData/assets/routes_KML/workingKML/93_parsedKML_TEST.kml', options)).then(function(dataSource){
+        viewer.clock.shouldAnimate = false;
+
+        var rider = dataSource.entities.getById('tour');
+
+                    viewer.entities.add({
+
+            //Use our computed positions
+            // position : position,
+
+            //Automatically compute orientation based on position movement.
+            // orientation : new Cesium.VelocityOrientationProperty(position),
+
+            //Load the Cesium plane model to represent the entity
+            model : {
+                uri : '/Apps/SampleData/models/CesiumAir/Cesium_Air.gltf',
+                minimumPixelSize : 64
+            },
+
+            //Show the path as a pink line sampled in 1 second increments.
+            path : {
+                resolution : 1,
+                material : new Cesium.PolylineGlowMaterialProperty({
+                    glowPower : 0.1,
+                    color : Cesium.Color.YELLOW
+                }),
+                width : 10
+            }
+        });
+
+        viewer.flyTo(rider).then(function(){
+            viewer.trackedEntity = rider;
+            viewer.selectedEntity = viewer.trackedEntity;
+            viewer.clock.multiplier = 6;
+            viewer.clock.shouldAnimate = true;
+
+        });
+    });
+
+    if (typeof Cesium !== "undefined") {
+        startup(Cesium);
+    } else if (typeof require === "function") {
+        require(["Cesium"], startup);
+    }
+
+    audiojs.events.ready(function() {
+      var as = audiojs.createAll();
+    });
+  </script>
+
+</body>
+</html>

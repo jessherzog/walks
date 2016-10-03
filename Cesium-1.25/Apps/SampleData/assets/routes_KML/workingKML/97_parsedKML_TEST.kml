@@ -26,13 +26,13 @@
             <IconStyle>
                 <scale>1.3</scale>
                 <Icon>
-                    <href>http://maps.google.com/mapfiles/kml/pal3/icon62.png</href>
+                    <href>https://maps.google.com/mapfiles/kml/shapes/poi.png</href>
                 </Icon>
                 <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
             </IconStyle>
         </Style>
 
-        <Style id="end">
+<!--         <Style id="end">
             <IconStyle>
                 <scale>1.3</scale>
                 <Icon>
@@ -40,7 +40,7 @@
                 </Icon>
                 <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
             </IconStyle>
-        </Style>
+        </Style> -->
 
         <Placemark>
             <name><![CDATA[]]></name>
@@ -57,7 +57,7 @@
         </Placemark>
 
         <Placemark id="tour">
-            <name><![CDATA[Us]]></name>
+            <name><![CDATA[]]></name>
             <description>
                 <![CDATA[walk taken on Sept 7th]]>
             </description>
@@ -195,11 +195,11 @@
         </Placemark>
 
         <Placemark>
-            <name><![CDATA[(End)]]></name>
+            <name><![CDATA[]]></name>
+            <description><![CDATA[]]></description>
             <TimeStamp>
                 <when>2016-09-07T01:21:00.000Z</when>
             </TimeStamp>
-            <styleUrl>#end</styleUrl>
             <Point>
                 <coordinates>
                     -73.9779643,40.7213755,0.0

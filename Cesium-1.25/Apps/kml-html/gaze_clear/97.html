@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
-  <title>9/5 walk</title>
+  <title>9/7 walk</title>
 
   <script src="/Build/Cesium/Cesium.js"></script>
 
@@ -28,7 +28,7 @@
         canvas : viewer.scene.canvas
     };
 
-    viewer.dataSources.add(Cesium.KmlDataSource.load('../SampleData/assets/routes_KML/workingKML/95_parsedKML_TEST.kml', options)).then(function(dataSource){
+    viewer.dataSources.add(Cesium.KmlDataSource.load('../../SampleData/assets/routes_KML/workingKML/97_parsedKML_TEST.kml', options)).then(function(dataSource){
         viewer.clock.shouldAnimate = false;
         var rider = dataSource.entities.getById('tour');
         viewer.flyTo(rider).then(function(){
