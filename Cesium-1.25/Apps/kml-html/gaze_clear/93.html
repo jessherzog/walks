@@ -23,19 +23,41 @@
 </head>
 <body>
     <div id="cesiumContainer"></div>
-    <audio src="/mp3/juicy.mp3" preload="auto" />
+    <audio preload="auto">
+       <source src="/mp3/juicy.mp3"> 
+    </audio>
 
   <script>
-    var viewer = new Cesium.Viewer('cesiumContainer');
+    var coordX;
+    var coordY;
 
-    // viewer.scene.globe.enableLighting = true;
-    // viewer.terrainProvider = new Cesium.CesiumTerrainProvider({
-    //   url : 'https://assets.agi.com/stk-terrain/world',
-    //   requestWaterMask : true,
-    //   requestVertexNormals : true
-    // });
+    var viewer = new Cesium.Viewer('cesiumContainer', 
+    {
+      infoBox : false,
+      selectionIndicator : false,
+      shadows : true
+    });
 
-    // viewer.scene.globe.depthTestAgainstTerrain = true;
+    var scene = viewer.scene;
+
+    var modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
+        Cesium.Cartesian3.fromDegrees(coordX, coordY, 0.0));
+    
+    // create two vars
+    // store each, .split(",")
+    // create vars index
+
+    var model = scene.primitives.add(Cesium.Model.fromGltf({
+        url : '../../SampleData/models/CesiumMan/Cesium_Man.gltf',
+        modelMatrix : modelMatrix, 
+        scale : 6.0
+    }));
+
+    Cesium.when(model.readyPromise).then(function(model) {
+      model.activeAnimations.addAll({
+        loop : Cesium.ModelAnimationLoop.REPEAT
+      });
+    });
 
     var options = {
         camera : viewer.scene.camera,
@@ -47,30 +69,7 @@
 
         var rider = dataSource.entities.getById('tour');
 
-                    viewer.entities.add({
 
-            //Use our computed positions
-            // position : position,
-
-            //Automatically compute orientation based on position movement.
-            // orientation : new Cesium.VelocityOrientationProperty(position),
-
-            //Load the Cesium plane model to represent the entity
-            model : {
-                uri : '/Apps/SampleData/models/CesiumAir/Cesium_Air.gltf',
-                minimumPixelSize : 64
-            },
-
-            //Show the path as a pink line sampled in 1 second increments.
-            path : {
-                resolution : 1,
-                material : new Cesium.PolylineGlowMaterialProperty({
-                    glowPower : 0.1,
-                    color : Cesium.Color.YELLOW
-                }),
-                width : 10
-            }
-        });
 
         viewer.flyTo(rider).then(function(){
             viewer.trackedEntity = rider;
@@ -86,7 +85,9 @@
     } else if (typeof require === "function") {
         require(["Cesium"], startup);
     }
+  </script>
 
+  <script>
     audiojs.events.ready(function() {
       var as = audiojs.createAll();
     });

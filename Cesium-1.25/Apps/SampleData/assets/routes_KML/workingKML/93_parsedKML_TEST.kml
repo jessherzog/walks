@@ -20,6 +20,29 @@
                 <href>https://maps.google.com/mapfiles/kml/shapes/poi.png</href>
             </Icon>
             </IconStyle>
+
+            <!-- <Model id="model_4">
+                        <altitudeMode>relativeToGround</altitudeMode>
+                        <Location>
+                          <longitude>-73.9875989</longitude>
+                          <latitude>40.7330621</latitude>
+                          <altitude>0</altitude>
+                        </Location>
+                        <Orientation>
+                          <heading>0</heading>
+                          <tilt>0</tilt>
+                          <roll>0</roll>
+                        </Orientation>
+                        <Scale>
+                          <x>1000</x>
+                          <y>1000</y>
+                          <z>1000</z>
+                        </Scale>
+
+                        <Link>
+                        <href>../models/CesiumMan/Cesium_Man.glb</href>
+                        </Link>
+                        </Model> -->
         </Style>
 
         <Style id="start">
@@ -68,6 +91,7 @@
                 <altitudeMode>absolute</altitudeMode>
                 <gx:interpolate>1</gx:interpolate>
                 <gx:Track>
+
                     <when>2016-09-03T01:01:00.000Z</when>
                     <gx:coord>-73.9875989,40.7330621,0.0</gx:coord>
 
