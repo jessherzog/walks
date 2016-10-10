@@ -14,56 +14,13 @@
                 <color>FFFF00FF</color>
                 <width>3.0</width>
             </LineStyle>
-            <IconStyle>
-        <scale>1.3</scale>
-            <Icon>
-                <href>https://maps.google.com/mapfiles/kml/shapes/poi.png</href>
-            </Icon>
-            </IconStyle>
-
-            <!-- <Model id="model_4">
-                        <altitudeMode>relativeToGround</altitudeMode>
-                        <Location>
-                          <longitude>-73.9875989</longitude>
-                          <latitude>40.7330621</latitude>
-                          <altitude>0</altitude>
-                        </Location>
-                        <Orientation>
-                          <heading>0</heading>
-                          <tilt>0</tilt>
-                          <roll>0</roll>
-                        </Orientation>
-                        <Scale>
-                          <x>1000</x>
-                          <y>1000</y>
-                          <z>1000</z>
-                        </Scale>
-
-                        <Link>
-                        <href>../models/CesiumMan/Cesium_Man.glb</href>
-                        </Link>
-                        </Model> -->
         </Style>
 
         <Style id="start">
-            <IconStyle>
-                <scale>1.3</scale>
-                <Icon>
-                    <href>https://maps.google.com/mapfiles/kml/shapes/poi.png</href>
-                </Icon>
-                <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
-            </IconStyle>
         </Style>
 
-<!--         <Style id="end">
-            <IconStyle>
-                <scale>1.3</scale>
-                <Icon>
-                    <href>http://maps.google.com/mapfiles/kml/pal2/icon13.png</href>
-                </Icon>
-                <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
-            </IconStyle>
-        </Style> -->
+        <Style id="end">
+        </Style>
 
         <Placemark>
             <name><![CDATA[]]></name>
@@ -80,10 +37,6 @@
         </Placemark>
 
         <Placemark id="tour">
-            <name><![CDATA[]]></name>
-            <description>
-                <![CDATA[walk taken on Sept 3rd]]>
-            </description>
 
             <styleUrl>#track</styleUrl>
 

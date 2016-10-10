@@ -21,7 +21,20 @@
   <div id="cesiumContainer"></div>
 
   <script>
-    var viewer = new Cesium.Viewer('cesiumContainer');
+    var coordX = -73.9779907;
+    var coordY = 40.7213582;
+
+    var viewer = new Cesium.Viewer('cesiumContainer', 
+    {
+      infoBox : false,
+      selectionIndicator : false,
+      shadows : true
+    });
+
+    var scene = viewer.scene;
+
+    var modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
+        Cesium.Cartesian3.fromDegrees(coordX,coordY,0.0));
 
     var options = {
         camera : viewer.scene.camera,
@@ -30,7 +43,18 @@
 
     viewer.dataSources.add(Cesium.KmlDataSource.load('../../SampleData/assets/routes_KML/workingKML/94_parsedKML_TEST.kml', options)).then(function(dataSource){
         viewer.clock.shouldAnimate = false;
-        var rider = dataSource.entities.getById('tour');
+        
+        var position = dataSource.entities.getById('tour').position;
+
+        var rider = viewer.entities.add({
+          position: position,
+          model: {
+            uri: '../../SampleData/models/CesiumMan/Cesium_Man.gltf',
+            minimumPixelSize: 64
+          },
+          orientation : new Cesium.VelocityOrientationProperty(position)
+        });
+
         viewer.flyTo(rider).then(function(){
             viewer.trackedEntity = rider;
             viewer.selectedEntity = viewer.trackedEntity;
