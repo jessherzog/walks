@@ -7,7 +7,9 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   </head>
   <style>
-  		
+  	#bigthing{
+  		position: relative;
+  	}
   	.sec{margin: 3em; clear: both;}
   	a{
   		text-decoration: none;
@@ -26,15 +28,18 @@
   		top: 0;
   		left: 0;
   		z-index: -30000;
+  		position: absolute;
   	}
   	#contained{
   		top: 0;
   		left: 0;
 		z-index: 30000;
+		position: absolute;
   	}
 
   </style>
   <body>
+  	<div id="bigthing">
 		<div id="gifsonright">
     		<img src="gif/bubble.gif">
     		<img src="gif/conf.gif">
@@ -132,6 +137,6 @@
 			</ul>
     	</div>
     	</div>
-  
+  	</div>
   </body>
 </html>
